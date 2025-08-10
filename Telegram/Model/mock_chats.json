@@ -1,0 +1,856 @@
+[
+  {
+    "id": "2020e1ea-524c-4b90-aae8-a6c453aa930b",
+    "title": "Tom Hanks",
+    "messages": [
+      {
+        "sender": {
+          "senderId": "tom_hanks",
+          "displayName": "Tom Hanks",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Tom_Hanks_2016.jpg"
+        },
+        "messageId": "32024695-0176-4f11-8674-6d6b0378138d",
+        "sentDate": "2025-07-10T09:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Morning, I've updated the spec with the latest API changes. Did you get a chance to review it?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "76683554-680c-4b78-8ab9-904a0c08b3f3",
+        "sentDate": "2025-07-10T09:10:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Morning Tom. I skimmed it—overall solid, but the authentication flow needs clarification and the error handling section is light."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "tom_hanks",
+          "displayName": "Tom Hanks",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Tom_Hanks_2016.jpg"
+        },
+        "messageId": "55595440-e0ef-491d-a073-f251a6aa8272",
+        "sentDate": "2025-07-10T10:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Good points. Can we sync at 2pm to go over the auth details?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "03943831-b330-435c-b909-01df66691abb",
+        "sentDate": "2025-07-10T10:05:00Z",
+        "kind": {
+          "type": "text",
+          "text": "2pm works. I'll prepare a list of questions and send a summary before the meeting."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "tom_hanks",
+          "displayName": "Tom Hanks",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Tom_Hanks_2016.jpg"
+        },
+        "messageId": "d5d52bcc-11ee-46f6-82e4-6064c30a714a",
+        "sentDate": "2025-07-11T14:05:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Backend team just finished the integration tests; should be smooth on our end."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "9a2592d8-f6dd-49d7-949a-caf1cdaaa826",
+        "sentDate": "2025-07-11T14:20:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Great, I'll update the client stub and share the draft by end of day."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "tom_hanks",
+          "displayName": "Tom Hanks",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Tom_Hanks_2016.jpg"
+        },
+        "messageId": "e64ee613-3d5c-4a05-9556-c8f3bbe90492",
+        "sentDate": "2025-07-12T08:30:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Also, do we have final design assets for the UI?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "85f30030-e20f-4b93-917e-a7aa2a5dfaa2",
+        "sentDate": "2025-07-12T09:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Received the mockups this morning. I'll consolidate feedback and send them back by noon."
+        }
+      }
+    ],
+    "unreadCount": 0
+  },
+  {
+    "id": "e46831a5-1b32-4cab-80ce-1ca13e951e7e",
+    "title": "Ryan Reynolds",
+    "messages": [
+      {
+        "sender": {
+          "senderId": "ryan_reynolds",
+          "displayName": "Ryan Reynolds",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ryan_Reynolds_%2819569352488%29.jpg"
+        },
+        "messageId": "804cf052-4436-4437-b217-69560fa2d358",
+        "sentDate": "2025-07-15T11:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Are we still on for the design review tomorrow? I want to make sure the deck reflects the updated branding."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "46792c39-03d8-4b19-8265-1977cafacfbc",
+        "sentDate": "2025-07-15T11:05:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Yes, 10am is good. I saw the new color palette; the contrast on the secondary buttons could be stronger."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "ryan_reynolds",
+          "displayName": "Ryan Reynolds",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ryan_Reynolds_%2819569352488%29.jpg"
+        },
+        "messageId": "a8aa359e-6bc1-492d-9197-58cfb3d50b7c",
+        "sentDate": "2025-07-15T11:10:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Makes sense. I'll tweak the palette and send an updated draft. Do you need anything else ahead of time?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "1f9d7a8e-e612-4fb8-89af-70d91b798ba0",
+        "sentDate": "2025-07-15T11:20:00Z",
+        "kind": {
+          "type": "text",
+          "text": "If you can include the mobile layout variations, that would help the discussion."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "ryan_reynolds",
+          "displayName": "Ryan Reynolds",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ryan_Reynolds_%2819569352488%29.jpg"
+        },
+        "messageId": "1a60ae22-b753-4808-8f23-b7cf7694d25a",
+        "sentDate": "2025-07-15T12:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Got it. I'll send the draft by noon."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "116ea106-b31a-48ed-a45c-6ac67e81cd3a",
+        "sentDate": "2025-07-15T12:15:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Received. A couple of small adjustments: the header font size feels too large on mobile, and the spacing in the footer is tight."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "ryan_reynolds",
+          "displayName": "Ryan Reynolds",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ryan_Reynolds_%2819569352488%29.jpg"
+        },
+        "messageId": "7cc2c49e-2840-4eb4-ac2d-2700ab075ad9",
+        "sentDate": "2025-07-15T13:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Thanks, I'll apply those tweaks and finalize."
+        }
+      }
+    ],
+    "unreadCount": 1
+  },
+  {
+    "id": "817e7ac9-96d1-410d-b5a8-6a2e90009503",
+    "title": "Dwayne Johnson",
+    "messages": [
+      {
+        "sender": {
+          "senderId": "dwayne_johnson",
+          "displayName": "Dwayne Johnson",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dwayne_The_Rock_Johnson_2009_portrait.jpg"
+        },
+        "messageId": "f088282e-c0ee-4845-9384-338cfb5d472c",
+        "sentDate": "2025-07-20T18:30:00Z",
+        "kind": {
+          "type": "text",
+          "text": "The script rewrite is ready. Want to review it tonight?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "7c893dca-fbf9-4415-806d-e6ed4d408e8a",
+        "sentDate": "2025-07-20T18:40:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Yes, 8pm works. Send over the latest version so I can read it beforehand."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "dwayne_johnson",
+          "displayName": "Dwayne Johnson",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dwayne_The_Rock_Johnson_2009_portrait.jpg"
+        },
+        "messageId": "e03cc2ff-b578-4c94-ba8b-be97a85c1632",
+        "sentDate": "2025-07-20T18:50:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Sent. Pay attention to the new opening sequence; I think it gives the protagonist more agency."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "79e8cca5-8f67-4ce9-b7ce-1c2552aea393",
+        "sentDate": "2025-07-21T09:20:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Got it. I'll read through and give you feedback by tomorrow afternoon."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "dwayne_johnson",
+          "displayName": "Dwayne Johnson",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dwayne_The_Rock_Johnson_2009_portrait.jpg"
+        },
+        "messageId": "405e5f60-8f0b-45d3-b308-0cb4af03e471",
+        "sentDate": "2025-07-21T14:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Any thoughts on the pacing? I'm worried the second act drags."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "fa171a6e-bdde-4584-a3cd-753a7733cd16",
+        "sentDate": "2025-07-21T15:30:00Z",
+        "kind": {
+          "type": "text",
+          "text": "The second act could use a tighter transition between scenes two and three. Also, the antagonist's motive feels a bit vague."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "dwayne_johnson",
+          "displayName": "Dwayne Johnson",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dwayne_The_Rock_Johnson_2009_portrait.jpg"
+        },
+        "messageId": "fb125a87-d215-446e-acf8-32de42f5c05d",
+        "sentDate": "2025-07-21T16:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Good catch. I'll sharpen the antagonist's backstory and tighten the transition."
+        }
+      }
+    ],
+    "unreadCount": 1
+  },
+  {
+    "id": "9b6e3e74-2ecf-462c-a75f-ec4053e4d0fb",
+    "title": "Satya Nadella",
+    "messages": [
+      {
+        "sender": {
+          "senderId": "satya_nadella",
+          "displayName": "Satya Nadella",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/85/Satya_Nadella_2017.jpg"
+        },
+        "messageId": "a767f3c5-4c62-4865-845d-2d4c98f464d5",
+        "sentDate": "2025-07-22T10:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "I've been reviewing the cross-platform sync proposal. The latency numbers look off; can we optimize the payload size?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "9d21c985-23b0-4f01-a810-29ddddac7ec9",
+        "sentDate": "2025-07-22T10:10:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Agree, we can compress the delta updates and switch to HTTP/2. I'll send updated benchmarks by end of day."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "satya_nadella",
+          "displayName": "Satya Nadella",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/85/Satya_Nadella_2017.jpg"
+        },
+        "messageId": "2d2f8813-d489-4701-b7b0-e21cbfa2e281",
+        "sentDate": "2025-07-22T11:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Also, team wants to ensure SSO works seamlessly with Azure AD. Can you prep a demo?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "d78f0fd5-5419-4dbd-9451-1d5e3643edfe",
+        "sentDate": "2025-07-22T11:15:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Yes, I’ll build a minimal demo and share the link. Do you prefer the sample use of OAuth2 with MSAL?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "satya_nadella",
+          "displayName": "Satya Nadella",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/85/Satya_Nadella_2017.jpg"
+        },
+        "messageId": "513d3cdc-1a05-44fc-892d-82267007c130",
+        "sentDate": "2025-07-22T12:30:00Z",
+        "kind": {
+          "type": "text",
+          "text": "MSAL is fine; include token refresh edge cases. And can we push a preliminary build to staging tomorrow?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "e65a5297-8738-4f37-be17-44a756bb1236",
+        "sentDate": "2025-07-22T13:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Will do. I'll have the staging build up by tomorrow morning with logging enabled."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "satya_nadella",
+          "displayName": "Satya Nadella",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/85/Satya_Nadella_2017.jpg"
+        },
+        "messageId": "4b25e3a0-5f22-463e-b836-e0ddf6294daf",
+        "sentDate": "2025-07-22T14:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Perfect. I'll loop in the integration team."
+        }
+      }
+    ],
+    "unreadCount": 1
+  },
+  {
+    "id": "cf548169-819a-4345-939c-0f86e5724079",
+    "title": "Greta Thunberg",
+    "messages": [
+      {
+        "sender": {
+          "senderId": "greta_thunberg",
+          "displayName": "Greta Thunberg",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://ucarecdn.com/80ccae16-dc44-4455-8596-04383a0d0b7f/-/format/auto/-/preview/3000x3000/-/quality/lighter/"
+        },
+        "messageId": "1c853b49-3aa8-4831-a28a-73d9bcbad5c5",
+        "sentDate": "2025-07-23T09:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Have you considered how the app's data centers impact carbon emissions? We should surface that to users."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "ec12d700-d8b3-4e80-a984-6f641d0847bf",
+        "sentDate": "2025-07-23T09:10:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Yes, I'm adding a carbon footprint tracker based on usage metrics and estimating emissions per feature."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "greta_thunberg",
+          "displayName": "Greta Thunberg",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://ucarecdn.com/80ccae16-dc44-4455-8596-04383a0d0b7f/-/format/auto/-/preview/3000x3000/-/quality/lighter/"
+        },
+        "messageId": "ab2b9446-9dd1-4c45-8705-9e60702bc959",
+        "sentDate": "2025-07-23T09:25:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Good. Make sure the calculations are transparent and source data is cited. Users should be able to opt into offset suggestions."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "d893471c-957e-4c89-986e-80b6bf6f90a3",
+        "sentDate": "2025-07-23T09:40:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Agreed. I'll include a breakdown and a toggle for opt-in recommendations. Should we include partner offsets or let users choose?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "greta_thunberg",
+          "displayName": "Greta Thunberg",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://ucarecdn.com/80ccae16-dc44-4455-8596-04383a0d0b7f/-/format/auto/-/preview/3000x3000/-/quality/lighter/"
+        },
+        "messageId": "c464d198-abc4-4dd8-a638-da3cb9d50e17",
+        "sentDate": "2025-07-23T10:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Start with third-party verified offsets, then expand to user-selected options."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "90ea2628-6633-4a62-bf30-fb90d09498e5",
+        "sentDate": "2025-07-23T10:15:00Z",
+        "kind": {
+          "type": "text",
+          "text": "I'll draft the UI and send a preview by tomorrow."
+        }
+      }
+    ],
+    "unreadCount": 0
+  },
+  {
+    "id": "269e43b4-fe64-4407-8ceb-66d2306b2753",
+    "title": "Zendaya",
+    "messages": [
+      {
+        "sender": {
+          "senderId": "zendaya",
+          "displayName": "Zendaya",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://media.gettyimages.com/id/2192559369/nl/foto/beverly-hills-california-zendaya-attends-the-82nd-annual-golden-globe-awards-at-the-beverly.jpg?s=612x612&w=0&k=20&c=Wxw38k1OHnQmXW0905EJNr8q6X7tK-T-V6jcfRi83RE="
+        },
+        "messageId": "b6e3d9fa-7f06-4133-a173-454331e114e6",
+        "sentDate": "2025-07-24T14:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "The new lifestyle app's color story feels flat on dark mode; can we adjust for vibrancy?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "be986eee-47cf-4fa8-93c9-8f48813091d7",
+        "sentDate": "2025-07-24T14:10:00Z",
+        "kind": {
+          "type": "text",
+          "text": "I can increase saturation and tweak the accent contrast. Do you have a reference palette?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "zendaya",
+          "displayName": "Zendaya",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://media.gettyimages.com/id/2192559369/nl/foto/beverly-hills-california-zendaya-attends-the-82nd-annual-golden-globe-awards-at-the-beverly.jpg?s=612x612&w=0&k=20&c=Wxw38k1OHnQmXW0905EJNr8q6X7tK-T-V6jcfRi83RE="
+        },
+        "messageId": "21f53133-c2d1-4245-afcb-aea75ea57fa2",
+        "sentDate": "2025-07-24T14:30:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Yes, I'll send over a mood board. Also, the onboarding flow needs more personality—maybe subtle animations."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "6a3f6db1-ff95-4fc5-8255-cfe8222d8c8f",
+        "sentDate": "2025-07-24T14:45:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Understood. I'll prototype micro-interactions and integrate your mood board. Any accessibility concerns to prioritize?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "zendaya",
+          "displayName": "Zendaya",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://media.gettyimages.com/id/2192559369/nl/foto/beverly-hills-california-zendaya-attends-the-82nd-annual-golden-globe-awards-at-the-beverly.jpg?s=612x612&w=0&k=20&c=Wxw38k1OHnQmXW0905EJNr8q6X7tK-T-V6jcfRi83RE="
+        },
+        "messageId": "6ac1d08e-72f9-4f9d-b584-7379a1f3d7cb",
+        "sentDate": "2025-07-24T15:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Focus on readable typography and ensure animations can be reduced for motion sensitivity."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "60105559-3199-4303-83b1-d36b818e3f32",
+        "sentDate": "2025-07-24T15:20:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Got it. I'll include a 'reduce motion' toggle and send the updated mock by end of day."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "zendaya",
+          "displayName": "Zendaya",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://media.gettyimages.com/id/2192559369/nl/foto/beverly-hills-california-zendaya-attends-the-82nd-annual-golden-globe-awards-at-the-beverly.jpg?s=612x612&w=0&k=20&c=Wxw38k1OHnQmXW0905EJNr8q6X7tK-T-V6jcfRi83RE="
+        },
+        "messageId": "8228583f-89f7-43af-93ed-b07210b23faa",
+        "sentDate": "2025-07-24T16:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Perfect, looking forward to it."
+        }
+      }
+    ],
+    "unreadCount": 1
+  },
+  {
+    "id": "077bed9f-5d28-4a4e-bd01-a415129de0f3",
+    "title": "LeBron James",
+    "messages": [
+      {
+        "sender": {
+          "senderId": "lebron_james",
+          "displayName": "LeBron James",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/1/13/Lebron_James_2022small.jpg"
+        },
+        "messageId": "2969d674-e960-4d46-ba4c-e758eb2f4f83",
+        "sentDate": "2025-07-25T08:30:00Z",
+        "kind": {
+          "type": "text",
+          "text": "We're launching the sports engagement campaign next month. Need to align on the in-app promotion mechanics."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "23f3fa92-33f1-40aa-b810-c6916453e03b",
+        "sentDate": "2025-07-25T08:45:00Z",
+        "kind": {
+          "type": "text",
+          "text": "What's the primary call to action? Do we want users to share highlights or participate in challenges?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "lebron_james",
+          "displayName": "LeBron James",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/1/13/Lebron_James_2022small.jpg"
+        },
+        "messageId": "91b3622e-e24e-491c-8922-657270b435df",
+        "sentDate": "2025-07-25T09:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Both. Sharing gets bonus points, but challenges drive retention. Let's make the reward tiers clear."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "41987067-9566-4169-9b83-6d23ba81eb41",
+        "sentDate": "2025-07-25T09:15:00Z",
+        "kind": {
+          "type": "text",
+          "text": "I'll design a tiered badge system and map triggers for the backend. Should premium users get early access?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "lebron_james",
+          "displayName": "LeBron James",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/1/13/Lebron_James_2022small.jpg"
+        },
+        "messageId": "3045f4cf-66f0-434e-b42a-ebf25140822f",
+        "sentDate": "2025-07-25T09:30:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Yes, give them exclusive sneak peeks and double points during the first week."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "cee6bd05-db9f-4752-a293-744a0ec248b9",
+        "sentDate": "2025-07-25T09:50:00Z",
+        "kind": {
+          "type": "text",
+          "text": "I'll update the spec and send the draft campaign flow."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "lebron_james",
+          "displayName": "LeBron James",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/1/13/Lebron_James_2022small.jpg"
+        },
+        "messageId": "4675b1b0-94ea-4fa6-9c8b-17f88015c9a6",
+        "sentDate": "2025-07-25T10:10:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Solid. Also, can we integrate a referral code that ties back to local gyms?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "12bc1652-1381-496b-8e02-ebf57282a47a",
+        "sentDate": "2025-07-25T10:30:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Yes, I'll add referral tracking and gym partner metadata."
+        }
+      }
+    ],
+    "unreadCount": 0
+  },
+  {
+    "id": "62714dd7-3229-4de8-9a57-5aa75d640eb8",
+    "title": "Tim Cook",
+    "messages": [
+      {
+        "sender": {
+          "senderId": "tim_cook",
+          "displayName": "Tim Cook",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://media.gettyimages.com/id/2171009958/nl/foto/cupertino-california-apple-ceo-tim-cook-delivers-remarks-before-the-start-of-an-apple-event-at.jpg?s=612x612&w=0&k=20&c=pR2SwcNS-RTcC-UJ9yECcbHn4mezFi8guiciKk9xPSY="
+        },
+        "messageId": "8106ae30-6feb-4015-8c78-b30c8b7df3dc",
+        "sentDate": "2025-07-25T11:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Before submission, ensure the app fully adopts the new Swift concurrency model and passes our performance guidelines."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "fc25f9cc-f6bf-4981-99d8-430172e67a5d",
+        "sentDate": "2025-07-25T11:15:00Z",
+        "kind": {
+          "type": "text",
+          "text": "We're migrating the network layer to async/await and profiling main-thread usage; latency is within targets so far."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "tim_cook",
+          "displayName": "Tim Cook",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://media.gettyimages.com/id/2171009958/nl/foto/cupertino-california-apple-ceo-tim-cook-delivers-remarks-before-the-start-of-an-apple-event-at.jpg?s=612x612&w=0&k=20&c=pR2SwcNS-RTcC-UJ9yECcbHn4mezFi8guiciKk9xPSY="
+        },
+        "messageId": "428f04d0-cc62-4ab3-91de-2c14ee26d455",
+        "sentDate": "2025-07-25T11:40:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Good. Pay attention to memory overhead on older devices; the Launch Time metric must stay under 1.2 seconds."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "7ddd88c1-2e0d-42a6-80de-697694b05090",
+        "sentDate": "2025-07-25T12:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "I'll add cold-start instrumentation and defer noncritical work. Should we include a note about using Instruments in the submission notes?"
+        }
+      },
+      {
+        "sender": {
+          "senderId": "tim_cook",
+          "displayName": "Tim Cook",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://media.gettyimages.com/id/2171009958/nl/foto/cupertino-california-apple-ceo-tim-cook-delivers-remarks-before-the-start-of-an-apple-event-at.jpg?s=612x612&w=0&k=20&c=pR2SwcNS-RTcC-UJ9yECcbHn4mezFi8guiciKk9xPSY="
+        },
+        "messageId": "b8960a05-9958-4a92-babf-bfd31c2384c5",
+        "sentDate": "2025-07-25T12:20:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Yes, mention the optimization steps. Also, make sure privacy disclosures are explicit for data collected."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "self",
+          "displayName": "Me",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        },
+        "messageId": "236da831-4988-481e-a33d-2ba98c58585e",
+        "sentDate": "2025-07-25T12:45:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Will do. I'll finalize the App Store metadata and upload the build tonight."
+        }
+      },
+      {
+        "sender": {
+          "senderId": "tim_cook",
+          "displayName": "Tim Cook",
+          "lastSeenDate": "2025-08-02T12:30:49.850516Z",
+          "avatarURL": "https://media.gettyimages.com/id/2171009958/nl/foto/cupertino-california-apple-ceo-tim-cook-delivers-remarks-before-the-start-of-an-apple-event-at.jpg?s=612x612&w=0&k=20&c=pR2SwcNS-RTcC-UJ9yECcbHn4mezFi8guiciKk9xPSY="
+        },
+        "messageId": "026ec9db-6959-4002-81ae-b656a956877b",
+        "sentDate": "2025-07-25T13:00:00Z",
+        "kind": {
+          "type": "text",
+          "text": "Thanks. Looking forward to the launch."
+        }
+      }
+    ],
+    "unreadCount": 1
+  }
+]

@@ -12,16 +12,21 @@ final class ChatCell: UITableViewCell {
     // MARK: - Properties
     static let reuseIndentifier = "ChatCell"
     
-    private let avatarImage = UIImageView()
+    let avatarImage = UIImageView()
     private let titleLabel = UILabel()
     private let messageLabel = UILabel()
     private let timeLabel = UILabel()
     private let badgeView = UILabel()
-    
+    private let mutedImage = UIImageView()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        mutedImage.isHidden = true
     }
     
     required init?(coder: NSCoder) { fatalError() }
@@ -36,7 +41,7 @@ final class ChatCell: UITableViewCell {
             messageLabel.text = "-- empty --"
         }
         if let date = chat.lastMessage?.sentDate {
-            timeLabel.text = RelativeDateTimeFormatter().localizedString(for: date, relativeTo: Date())
+            timeLabel.text = format(date)
         }
         
         badgeView.isHidden = chat.unreadCount == 0
@@ -50,6 +55,8 @@ final class ChatCell: UITableViewCell {
             // fall‑back: placeholder
             avatarImage.image = UIImage(named: "avatar-placeholder")
         }
+        
+        mutedImage.isHidden = !chat.isMuted
     }
     
     // MARK: - Private Methods
@@ -61,12 +68,14 @@ final class ChatCell: UITableViewCell {
         avatarImage.translatesAutoresizingMaskIntoConstraints = false
         avatarImage.contentMode = .scaleAspectFill
         
-        // Configure colors,size,font for labels.
         titleLabel.font = .boldSystemFont(ofSize: 16)
+        
         messageLabel.font = .systemFont(ofSize: 14)
         messageLabel.textColor = .gray
+        
         timeLabel.font = .systemFont(ofSize: 14)
         timeLabel.textColor = .gray
+        
         badgeView.font = .systemFont(ofSize: 14)
         badgeView.textColor = .white
         badgeView.backgroundColor = .systemBlue
@@ -78,10 +87,17 @@ final class ChatCell: UITableViewCell {
         messageLabel.numberOfLines = 1
         badgeView.numberOfLines = 1
         
-        [avatarImage, titleLabel, messageLabel, timeLabel, badgeView].forEach {
+        mutedImage.tintColor = .systemGray
+        mutedImage.contentMode = .scaleAspectFit
+        mutedImage.translatesAutoresizingMaskIntoConstraints = false
+        mutedImage.image = UIImage(named: "muted")
+        mutedImage.isHidden = true
+        
+        [avatarImage, titleLabel, messageLabel, timeLabel, badgeView, mutedImage].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             contentView.addSubview($0)
         }
+        titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         
         NSLayoutConstraint.activate([
             // avatar
@@ -102,13 +118,21 @@ final class ChatCell: UITableViewCell {
             // message
             messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2),
             messageLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            messageLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            messageLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
 
             // badge
             badgeView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             badgeView.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 10),
             badgeView.widthAnchor.constraint(greaterThanOrEqualToConstant: 21),
-            badgeView.heightAnchor.constraint(equalToConstant: 21)
+            badgeView.heightAnchor.constraint(equalToConstant: 21),
+            
+            // muted
+            
+            mutedImage.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+            mutedImage.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 6),
+            mutedImage.trailingAnchor.constraint(lessThanOrEqualTo: timeLabel.leadingAnchor, constant: -6),
+            mutedImage.widthAnchor.constraint(equalToConstant: 14),
+            mutedImage.heightAnchor.constraint(equalToConstant: 14)
             
         ])
         

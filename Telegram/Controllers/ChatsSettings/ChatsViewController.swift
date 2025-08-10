@@ -13,6 +13,7 @@ final class ChatsViewController: UIViewController {
     
     
     // MARK: - Private properties
+    
     private let tableView = UITableView()
     private let searchController = UISearchController(searchResultsController: nil)
     private var chats: [Chat] = []
@@ -20,6 +21,7 @@ final class ChatsViewController: UIViewController {
 
     
     // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,6 +65,7 @@ final class ChatsViewController: UIViewController {
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
     }
+    
 }
     
 // MARK: - SearchBar Setup
@@ -107,6 +110,7 @@ extension ChatsViewController: UISearchResultsUpdating, UISearchBarDelegate {
 }
 
 // MARK: - UITableView DataSource
+
 extension ChatsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         chats.count
@@ -124,6 +128,8 @@ extension ChatsViewController: UITableViewDataSource {
         vc.title = chat.title
         vc.chat = chat
         navigationController?.pushViewController(vc, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -135,16 +141,21 @@ extension ChatsViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableView Delegate
+
 extension ChatsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let mute = UIContextualAction(style: .normal, title: "Mute") { action, view, completion in
             print("Muted chat: \(self.chats[indexPath.row].title)")
+            
+            self.chats[indexPath.row].isMuted.toggle()
+            tableView.reloadRows(at: [indexPath], with: .none)
+            
             completion(true)
         }
         
-        mute.image = UIImage(systemName: "volume.slash.fill")
+        mute.image = UIImage(named: "muteIcon")
         mute.backgroundColor = .systemOrange
         
         let delete = UIContextualAction(style: .destructive, title: "Delete") { action, view, completion in
@@ -153,14 +164,14 @@ extension ChatsViewController: UITableViewDelegate {
             completion(true)
         }
         
-        delete.image = UIImage(systemName: "trash")
+        delete.image = UIImage(named: "deleteIcon")
         delete.backgroundColor = .systemRed
         
         
         let archive = UIContextualAction(style: .normal, title: "Archive") { action, view, completion in
             
         }
-        archive.image = UIImage(systemName: "archivebox.fill")
+        archive.image = UIImage(named: "archiveIcon")
         archive.backgroundColor = .systemGray
         
         return UISwipeActionsConfiguration(actions: [archive,delete,mute])
@@ -171,13 +182,13 @@ extension ChatsViewController: UITableViewDelegate {
         let pin = UIContextualAction(style: .normal, title: "Pin") { action, view, completion in
             
         }
-        pin.image = UIImage(systemName: "pin.fill")
+        pin.image = UIImage(named: "pinIcon")
         pin.backgroundColor = .systemGreen
         
         let unread = UIContextualAction(style: .normal, title: "Unread") { action, view, completion in
             
         }
-        unread.image = UIImage(systemName: "message.badge.filled.fill")
+        unread.image = UIImage(named: "unreadIcon")
         unread.backgroundColor = .systemBlue
         
         return UISwipeActionsConfiguration(actions: [unread, pin])
@@ -191,12 +202,15 @@ extension ChatsViewController: UITableViewDelegate {
             previewProvider: {
                 let previewVC = ChatVC(chat: chat)
                 previewVC.isPreviewMode = true
-                return previewVC
+                return UINavigationController(rootViewController: previewVC)
             },
             actionProvider: { _ in
                 let markAsUnread = UIAction(title: "Mark as unread", image: UIImage(systemName: "message.badge.fill")) { _ in }
                 let pinAction = UIAction(title: "Pin", image: UIImage(systemName: "pin")) { _ in }
-                let muteAction = UIAction(title: "Mute", image: UIImage(systemName: "volume.slash.fill")) { _ in }
+                let muteAction = UIAction(title: "Mute", image: UIImage(systemName: "volume.slash.fill")) { _ in
+                    self.chats[indexPath.row].isMuted.toggle()
+                    tableView.reloadRows(at: [indexPath], with: .none)
+                }
                 let deleteAction = UIAction(title: "Delete", image: UIImage(systemName: "trash")) { _ in }
                 deleteAction.attributes = [.destructive]
                 

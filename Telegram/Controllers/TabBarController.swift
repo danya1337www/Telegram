@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+final class TabBarController: UITabBarController {
+    
+    // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +18,7 @@ class TabBarController: UITabBarController {
     }
     
     
-    // MARK: - Setup Tabs
+    // MARK: - Private methods
     
     private func setupTabs() {
         let contactsVC = self.setupNavController(
