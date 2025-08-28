@@ -15,7 +15,7 @@ final class ChatsViewController: UIViewController {
     private let searchController = UISearchController(searchResultsController: nil)
     private var chats: [Chat] = []
     private let service = ChatService()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,23 +25,23 @@ final class ChatsViewController: UIViewController {
         setupTableView()
         loadData()
     }
-    
+        
     private func loadData() {
-        DispatchQueue.global().async {
+        Task { [weak self] in
+            guard let self else { return }
             do {
-                self.chats = try self.service.loadChats()
+                self.chats = try await self.service.loadChats()
                 print("Loaded chats:", self.chats.count)
                 
-                DispatchQueue.main.async {
+                await MainActor.run {
                     self.tableView.reloadData()
                 }
-            }
-            catch {
-                print("loadChats error: \(error)")
+                
+            } catch {
+                assertionFailure("loadChats error: \(error)")
             }
         }
     }
-    
     
     private func setupTableView() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -80,7 +80,7 @@ extension ChatsViewController: UISearchResultsUpdating, UISearchBarDelegate {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         
-        definesPresentationContext = true
+        definesPresentationContext = false
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -121,11 +121,9 @@ extension ChatsViewController: UITableViewDataSource {
         let vc = ChatVC(chat: chat)
         vc.title = chat.title
         vc.chat = chat
-        vc.delegate = self
-        vc.chatIndex = indexPath.row
         
         navigationController?.pushViewController(vc, animated: true)
-    
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -163,6 +161,7 @@ extension ChatsViewController: UITableViewDelegate {
         
         delete.image = UIImage(named: "deleteIcon")
         delete.backgroundColor = Constants.Colors.deleteBackgroundColor
+        
         
         let archive = UIContextualAction(style: .normal, title: "Archive") { action, view, completion in
             
@@ -223,7 +222,6 @@ extension ChatsViewController: UITableViewDelegate {
                 let chat = self.chats[indexPath.row]
                 let vc = ChatVC(chat: chat)
                 vc.isPreviewMode = false
-                vc.delegate = self
                 
                 self.navigationController?.pushViewController(vc, animated: true)
             }
@@ -231,18 +229,6 @@ extension ChatsViewController: UITableViewDelegate {
     }
     
 }
-
-extension ChatsViewController: ChatViewDelegate {
-    func didReadChat(at index: Int) {
-        guard index < chats.count else { return }
-        chats[index].unreadCount = 0
-        DispatchQueue.main.async {
-            let indexPath = IndexPath(row: index, section: 0)
-            self.tableView.reloadRows(at: [indexPath], with: .none)
-        }
-    }
-}
-
 
 extension ChatsViewController {
     enum Constants {

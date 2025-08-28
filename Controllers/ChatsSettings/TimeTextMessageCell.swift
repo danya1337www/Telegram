@@ -11,21 +11,20 @@ import UIKit
 
 import MessageKit
 
-// Кастомная ячейка с временем внутри bubble
 final class TimeTextMessageCell: TextMessageCell {
 
-    private static let df: DateFormatter = {
-        let f = DateFormatter()
-        f.dateFormat = "HH:mm"
-        return f
+    private static let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter
     }()
 
     let timeLabel: UILabel = {
-        let l = UILabel()
-        l.font = .systemFont(ofSize: 12)
-        l.textColor = .secondaryLabel
-        l.translatesAutoresizingMaskIntoConstraints = false
-        return l
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 12)
+        label.textColor = .secondaryLabel
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
 
     override init(frame: CGRect) {
@@ -46,7 +45,7 @@ final class TimeTextMessageCell: TextMessageCell {
                             at indexPath: IndexPath,
                             and messagesCollectionView: MessagesCollectionView) {
         super.configure(with: message, at: indexPath, and: messagesCollectionView)
-        timeLabel.text = Self.df.string(from: message.sentDate)
+        timeLabel.text = Self.dateFormatter.string(from: message.sentDate)
         
         let isOutgoing = messagesCollectionView.messagesDataSource?
             .isFromCurrentSender(message: message) ?? false

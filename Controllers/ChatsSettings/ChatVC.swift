@@ -11,9 +11,6 @@ import InputBarAccessoryView
 
 final class ChatVC: MessagesViewController {
     
-    weak var delegate: ChatViewDelegate?
-    var chatIndex: Int = 0
-    
     init(chat: Chat!) {
         self.chat = chat
         super.init(nibName: nil, bundle: nil)
@@ -51,11 +48,6 @@ final class ChatVC: MessagesViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        markChatRead()
-    }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         tabBarController?.tabBar.isHidden = false
@@ -90,13 +82,6 @@ final class ChatVC: MessagesViewController {
     }
     
     // MARK: - Private methods
-    
-    private func markChatRead() {
-        if chat.unreadCount > 0 {
-            chat.unreadCount = 0
-            delegate?.didReadChat(at: chatIndex)
-        }
-    }
     
     private func setupAvatarImageView() -> UIImageView {
         let imageView = UIImageView()
@@ -361,10 +346,4 @@ private extension ChatVC{
         }
     }
 }
-
-protocol ChatViewDelegate: AnyObject {
-    func didReadChat(at index: Int)
-}
-
-
 

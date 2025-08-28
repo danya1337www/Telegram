@@ -9,7 +9,7 @@ import Foundation
 
 final class ChatService {
     
-    func loadChats(from resource: String = "mock_chats") throws -> [Chat] {
+    func loadChats(from resource: String = "mock_chats") async throws -> [Chat] {
         guard let url = Bundle.main.url(forResource: resource, withExtension: "json") else {
             throw CocoaError(.fileNoSuchFile)
         }

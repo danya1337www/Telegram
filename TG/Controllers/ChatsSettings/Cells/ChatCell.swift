@@ -9,10 +9,9 @@ import UIKit
 
 final class ChatCell: UITableViewCell {
     
-    // MARK: - Properties
     static let reuseIndentifier = "ChatCell"
     
-    let avatarImage = UIImageView()
+    private let avatarImage = UIImageView()
     private let titleLabel = UILabel()
     private let messageLabel = UILabel()
     private let timeLabel = UILabel()
@@ -48,11 +47,9 @@ final class ChatCell: UITableViewCell {
         badgeView.text = String(chat.unreadCount)
         
         if
-            let sender = chat.lastMessage?.sender as? Sender
-        {
+            let sender = chat.lastMessage?.sender as? Sender {
             avatarImage.load(from: sender.avatarURL)
         } else {
-            // fall‑back: placeholder
             avatarImage.image = UIImage(named: "avatar-placeholder")
         }
         
@@ -70,22 +67,23 @@ final class ChatCell: UITableViewCell {
         
         titleLabel.font = .boldSystemFont(ofSize: 16)
         
-        messageLabel.font = .systemFont(ofSize: 14)
+        messageLabel.font = .systemFont(ofSize: Constants.UI.systemFontSize)
         messageLabel.textColor = .gray
+        messageLabel.numberOfLines = 0
         
-        timeLabel.font = .systemFont(ofSize: 14)
+        timeLabel.font = .systemFont(ofSize: Constants.UI.systemFontSize)
         timeLabel.textColor = .gray
         
-        badgeView.font = .systemFont(ofSize: 14)
+        badgeView.font = .systemFont(ofSize: Constants.UI.systemFontSize)
         badgeView.textColor = .white
         badgeView.backgroundColor = .systemBlue
         badgeView.layer.cornerRadius = 10
         badgeView.clipsToBounds = true
         badgeView.textAlignment = .center
         
-        titleLabel.numberOfLines = 1
-        messageLabel.numberOfLines = 1
-        badgeView.numberOfLines = 1
+        titleLabel.numberOfLines = Constants.UI.numberOfLines
+        messageLabel.numberOfLines = Constants.UI.numberOfLines
+        badgeView.numberOfLines = Constants.UI.numberOfLines
         
         mutedImage.tintColor = .systemGray
         mutedImage.contentMode = .scaleAspectFit
@@ -100,34 +98,27 @@ final class ChatCell: UITableViewCell {
         titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         
         NSLayoutConstraint.activate([
-            // avatar
             avatarImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             avatarImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             avatarImage.widthAnchor.constraint(equalToConstant: 60),
             avatarImage.heightAnchor.constraint(equalToConstant: 60),
 
-            // title
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             titleLabel.leadingAnchor.constraint(equalTo: avatarImage.trailingAnchor, constant: 12),
 
-            // time
             timeLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             timeLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -2),
             timeLabel.widthAnchor.constraint(equalToConstant: 50),
 
-            // message
             messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2),
             messageLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            messageLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
+            messageLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -45),
 
-            // badge
             badgeView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             badgeView.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 10),
             badgeView.widthAnchor.constraint(greaterThanOrEqualToConstant: 21),
             badgeView.heightAnchor.constraint(equalToConstant: 21),
-            
-            // muted
-            
+                        
             mutedImage.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
             mutedImage.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 6),
             mutedImage.trailingAnchor.constraint(lessThanOrEqualTo: timeLabel.leadingAnchor, constant: -6),
@@ -150,12 +141,21 @@ extension UIImageView {
     func load(from url: URL?) {
         self.image = UIImage(systemName: "person.crop.circle")
         
-        guard let url = url else { return }
+        guard let url else { return }
         URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data, let img = UIImage(data: data) else { return }
             DispatchQueue.main.async {
                 self.image = img
             }
         }.resume()
+    }
+}
+
+extension ChatCell {
+    enum Constants {
+        enum UI {
+            static let numberOfLines = 1
+            static let systemFontSize: CGFloat = 14
+        }
     }
 }

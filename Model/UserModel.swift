@@ -99,7 +99,7 @@ struct Message: MessageType, Codable, Hashable {
 }
 
 struct Chat: Codable, Hashable {
-    let id: UUID
+    let id: String
     let title: String
     var messages: [Message]
     var unreadCount: Int
@@ -111,13 +111,13 @@ struct Chat: Codable, Hashable {
             case id, title, messages, unreadCount, lastOffset, isMuted
         }
 
-        init(id: UUID,
+        init(id: String,
              title: String,
              messages: [Message],
              unreadCount: Int,
              lastOffset: CGPoint? = nil,
              isMuted: Bool = false) {
-            self.id = UUID()
+            self.id = id
             self.title = title
             self.messages = messages
             self.unreadCount = unreadCount
@@ -127,7 +127,7 @@ struct Chat: Codable, Hashable {
 
         init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
-            id = try container.decode(UUID.self, forKey: .id)
+            id = try container.decode(String.self, forKey: .id)
             title = try container.decode(String.self, forKey: .title)
             messages = try container.decode([Message].self, forKey: .messages)
             unreadCount = try container.decode(Int.self, forKey: .unreadCount)
