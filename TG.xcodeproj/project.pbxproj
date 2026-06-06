@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BDE69ADD2E50BC4400E71EA4 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = BDE69ADC2E50BC4400E71EA4 /* MessageKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		BDE69A7C2E50BB6E00E71EA4 /* TG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE69ADD2E50BC4400E71EA4 /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = TG;
 			packageProductDependencies = (
+				BDE69ADC2E50BC4400E71EA4 /* MessageKit */,
 			);
 			productName = TG;
 			productReference = BDE69A7C2E50BB6E00E71EA4 /* TG.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = BDE69A732E50BB6E00E71EA4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BDE69ADB2E50BC4400E71EA4 /* XCRemoteSwiftPackageReference "MessageKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BDE69A7D2E50BB6E00E71EA4 /* Products */;
 			projectDirPath = "";
@@ -345,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BDE69ADB2E50BC4400E71EA4 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BDE69ADC2E50BC4400E71EA4 /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDE69ADB2E50BC4400E71EA4 /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BDE69A742E50BB6E00E71EA4 /* Project object */;
 }
